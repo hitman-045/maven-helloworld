@@ -1,3 +1,3 @@
 # maven-project
 
-Simple Maven Project by Avinash
+Simple Maven Project by MANI
