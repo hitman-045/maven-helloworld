@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: maven-helloworld-deploy
+spec:
+    replicas: 2
+    template:
+      metadata:
+       labels:
+         app: maven-helloworld-ctr
+      spec:
+         containers:
+         - name: maven-helloworld-pod
+           image: docker.io/sumanthsainooka/maven-helloworld-image:latest
+           ports:
+           - containerPort: 8080
