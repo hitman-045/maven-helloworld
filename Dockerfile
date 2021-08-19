@@ -1,6 +1,6 @@
-# Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "sumanthsainooka@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+FROM tomcat
+MAINTAINER sumanth
+ARG CONT_IMG_VER
+WORKDIR /usr/local/tomcat
+EXPOSE 8080
+COPY ./maven-helloworld/server/target/server.jar /usr/local/tomcat/webapps
