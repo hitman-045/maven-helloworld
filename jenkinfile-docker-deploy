@@ -76,7 +76,7 @@ stages {
 }     
 post {
         success {
-            archiveArtifacts 'maven-helloworld-web/target/*.war'
+            archiveArtifacts './maven-helloworld/server/target/server.jar*.war'
         }
         failure {
             mail to:"sumanthsainooka@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed"
